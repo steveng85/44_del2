@@ -1,8 +1,8 @@
 package com.company;
 
 public class Main {
-    Dice dice1 = new Dice();
-    Dice dice2 = new Dice();
+    static Dice dice1 = new Dice();
+    static Dice dice2 = new Dice();
     public void Turn() {
 
         dice1.Roll();
@@ -15,8 +15,8 @@ public class Main {
         gui.makeGUI();
         // Dette er et forslag til setup med bestemte tal da vi endnu ikke at fået indsat vores dice fra del 1
         Thread.sleep(1000); // pauser programmet i 1000 milisekunder (basically its fancy af)
-        gui.rollDice(1, 3);
-        Thread.sleep(1000);
-        gui.rollDice(6, 4);
+        gui.rollDice(dice1.Roll(),dice2.Roll());
+        //Thread.sleep(1000);
+        //gui.rollDice(dice1.Roll(),dice2.Roll());
     }
 }
