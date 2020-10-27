@@ -18,7 +18,8 @@ public class DiceTest {
 
             assertTrue("dice not lower than" + 1, value >= 1);
             assertTrue("dice not higher than" + 6, value <= 6);
-            System.out.println(i + " Dice test made");
+
         }
+        System.out.println("Dice test made");
     }
 }
