@@ -9,7 +9,7 @@ import java.awt.*;
 public class GUI_Controller {
     private GUI gui;
     void makeGUI() {
-        GUI_Field[] fields = {new GUI_Street(), new GUI_Street(), new GUI_Street()};
+        GUI_Field[] fields = {new GUI_Street("Your mom","needs glasses","to read this","200",Color.CYAN,Color.BLACK), new GUI_Street(), new GUI_Street()};
         gui = new GUI(fields, Color.gray);
     }
 
