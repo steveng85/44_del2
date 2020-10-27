@@ -4,7 +4,7 @@ public class Dice {
     private final int MAX = 6;
     private int eyeValue;
 
-    public int Roll(){
+    public int roll(){
 
         eyeValue = (int)(Math.random() * MAX) + 1;
 
