@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import static org.junit.Assert.*;
 
 public class DiceTest {
-    public boolean notGood = false;
 
     @Test
     public void roll() {
