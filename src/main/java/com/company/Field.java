@@ -14,4 +14,21 @@ public class Field {
         this.value = value;
         this.extraTurn = extraTurn;
     }
+
+    public String getTitle() {
+        return title;
+    }
+    public int getFieldNumber() {
+        return fieldNumber;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public int getValue() {
+        return value;
+    }
+    public Boolean getExtraTurn() {
+        return extraTurn;
+    }
+
 }
