@@ -18,5 +18,11 @@ public class Main {
         gui.rollDice(dice1.Roll(),dice2.Roll());
         //Thread.sleep(1000);
         //gui.rollDice(dice1.Roll(),dice2.Roll());
+        var list_of_fields = FieldFactory.makeFields();
+        for (int i = 0; i < list_of_fields.length; i++) {
+            System.out.println(list_of_fields[i].getTitle() + ", " + list_of_fields[i].getFieldNumber());
+        }
+
+
     }
 }
