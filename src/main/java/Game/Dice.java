@@ -1,4 +1,4 @@
-package com.company;
+package Game;
 
 public class Dice {
     private final int MAX = 6;
@@ -8,6 +8,10 @@ public class Dice {
 
         eyeValue = (int)(Math.random() * MAX) + 1;
 
+        return eyeValue;
+    }
+
+    public int getEyeValue() {
         return eyeValue;
     }
 
