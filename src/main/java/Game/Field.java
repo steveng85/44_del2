@@ -1,4 +1,4 @@
-package com.company;
+package Game;
 
 public class Field {
     private int fieldNumber;

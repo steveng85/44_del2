@@ -56,7 +56,7 @@ public class Game {
         dice2.roll();
         //
                 System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
-        currentPlayer.changePoints(checkRollRules(dice1.getEyeValue()+dice2.getEyeValue())); //adds/subtracts points to players' totals here.
+        //currentPlayer.changePoints(checkRollRules(dice1.getEyeValue()+dice2.getEyeValue())); //adds/subtracts points to players' totals here.
     }
 
     public void checkForWin() {
