@@ -10,17 +10,17 @@ public final class FieldFactory {
     public static  GUI_Field[] makeGUIFields() {
         gui_fields.GUI_Field[] fields = new GUI_Field[11];
         int i = 0;
-        fields[i++] = new GUI_Street("Tower", "+250", "2", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Crater", "-100", "3", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Palece gates", "D+100", "4", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Cold Desert", "-20", "5", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Walled city", "+180", "6", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Monastary", "0", "7", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Black cave", "-70", "8", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Huts in the mountain", "+60", "9", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("The Werewall", "-80/ekstra tur", "10", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("The pit", "-50", "11", "", Color.GRAY, Color.BLUE);
-        fields[i++] = new GUI_Street("Goldmine", "+650", "12", "", Color.GRAY, Color.BLUE);
+        fields[i++] = new GUI_Street("Tower", "+250", "2", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Crater", "-100", "3", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Palece gates", "D+100", "4", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Cold Desert", "-20", "5", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Walled city", "+180", "6", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Monastary", "0", "7", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Black cave", "-70", "8", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Huts in the mountain", "+60", "9", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("The Werewall", "-80/ekstra tur", "10", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("The pit", "-50", "11", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Goldmine", "+650", "12", "", Color.WHITE, Color.BLUE);
 
         return fields;
     }
