@@ -1,6 +1,10 @@
 package Game;
 
 import java.util.Scanner;
+import Game.Field;
+import Game.FieldFactory;
+
+
 
 public class Game {
 
@@ -11,6 +15,7 @@ public class Game {
     Player player1 = new Player();
     Player player2 = new Player();
     Player currentPlayer;
+    int diceTotal;
     boolean gameInProgress = true;
 
     public void startGame() {
@@ -54,9 +59,10 @@ public class Game {
     public void turn() {
         dice1.roll();
         dice2.roll();
-        //
-                System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
-        //currentPlayer.changePoints(checkRollRules(dice1.getEyeValue()+dice2.getEyeValue())); //adds/subtracts points to players' totals here.
+        diceTotal = dice1.getEyeValue() + dice2.getEyeValue();
+
+        System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
+        currentPlayer.changePoints(diceTotal);
     }
 
     public void checkForWin() {
