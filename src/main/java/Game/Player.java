@@ -21,18 +21,22 @@ public class Player {
 
 
     public void addCoins(int amount) {
+
         acBalnace.addCoins(amount);
     }
 
     public void resetAccount() {
+
         acBalnace.reset();
     }
 
     public String getName() {
+
         return name;
     }
 
     public int getCoins() {
+
         return acBalnace.getCoins();
     }
     /*

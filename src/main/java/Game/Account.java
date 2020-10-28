@@ -18,10 +18,12 @@ public class Account {
         coins = DEFAULT_COIN_AMOUNT;
     }
     public void addCoins(int amount) {
+
         coins += amount;
     }
 
     public void reset() {
+
         coins = DEFAULT_COIN_AMOUNT;
     }
 
@@ -34,6 +36,7 @@ public class Account {
 
 
     public int getCoins() {
+
         return coins;
     }
 
