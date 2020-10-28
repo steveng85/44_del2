@@ -12,7 +12,7 @@ public final class FieldFactory {
         int i = 0;
         fields[i++] = new GUI_Street("Tower", "+250", "2", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Crater", "-100", "3", "", Color.WHITE, Color.BLUE);
-        fields[i++] = new GUI_Street("Palece gates", "D+100", "4", "", Color.WHITE, Color.BLUE);
+        fields[i++] = new GUI_Street("Palece gates", "+100", "4", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Cold Desert", "-20", "5", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Walled city", "+180", "6", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Monastary", "0", "7", "", Color.WHITE, Color.BLUE);
