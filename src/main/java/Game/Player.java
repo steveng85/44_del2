@@ -3,7 +3,7 @@ package Game;
 public class Player {
     private String name;
     private int points;
-    private final int maxPoints = 40;
+    private final int maxPoints = 3000;
     private int lastRoll;
     private int currentRoll;
 
@@ -13,8 +13,8 @@ public class Player {
 
     public void changePoints(int points) {
         this.points += points;
-        if (this.points >= 40) {
-            this.points = 40;
+        if (this.points >= maxPoints) {
+            this.points = maxPoints;
         }
     }
     public void setRoll(int roll) {

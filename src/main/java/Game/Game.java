@@ -47,38 +47,6 @@ public class Game {
         */
     }
 
-    public int checkRollRules(int t) {
-        int rollTotal =  switch (t) {
-            case 2 -> {//+250
-            }
-            case 3 -> {//-100
-            }
-            case 4 -> {//+100
-            }
-            case 5 -> {//-20
-            }
-            case 6 -> {//+180
-            }
-            case 7 -> {//+0
-            }
-            case 8 -> {//-70
-            }
-            case 9 -> {//+60
-            }
-            case 10 -> {//-80
-            }
-            case 11 -> {//-50
-            }
-            case 12 -> {//+650
-            }
-
-
-
-
-        }
-        return rollTotal;
-    }
-
     public void round() {
 
     }
@@ -86,7 +54,8 @@ public class Game {
     public void turn() {
         dice1.roll();
         dice2.roll();
-        System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
+        //
+                System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
         currentPlayer.changePoints(checkRollRules(dice1.getEyeValue()+dice2.getEyeValue())); //adds/subtracts points to players' totals here.
     }
 

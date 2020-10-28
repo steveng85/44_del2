@@ -11,7 +11,6 @@ public class Account {
     public int getPoints() {return accountBalance;}
 
     public String toString(int accountBalance) {
-        String balance = toString(accountBalance);
-        return balance;
+        return toString(accountBalance);
     }
 }
