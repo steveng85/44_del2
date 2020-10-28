@@ -12,10 +12,9 @@ public class Game {
 
     Dice dice1 = new Dice();
     Dice dice2 = new Dice();
-    Player player1 = new Player();
-    Player player2 = new Player();
+    //Player player1 = new Player();
+    //Player player2 = new Player();
     Player currentPlayer;
-    int diceTotal;
     boolean gameInProgress = true;
 
     public void startGame() {
@@ -24,14 +23,14 @@ public class Game {
         //Player1 gives a name
         System.out.println("Input a name for Player1");
         String name1 = input.nextLine();
-        player1.setName(name1);
+        //player1.setName(name1);
         //player2 gives a name
         System.out.println("Input a name for Player2");
         String name2 = input.nextLine();
-        player2.setName(name2);
+       // player2.setName(name2);
         //Tells Who is who
-        System.out.println("Player1 is " + player1.getName());
-        System.out.println("Player2 is " + player2.getName());
+        //System.out.println("Player1 is " + player1.getName());
+        //System.out.println("Player2 is " + player2.getName());
         //Telling the players how to start the game
         System.out.println("Press enter to start and continue the game");
 
@@ -59,10 +58,10 @@ public class Game {
     public void turn() {
         dice1.roll();
         dice2.roll();
-        diceTotal = dice1.getEyeValue() + dice2.getEyeValue();
-
-        System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
-        currentPlayer.changePoints(diceTotal);
+        //
+                System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
+        //currentPlayer.changePoints(checkRollRules(dice1.getEyeValue()+dice2.getEyeValue())); //adds/subtracts points to players' totals here.
+    FieldFactory fields = new FieldFactory();
     }
 
     public void checkForWin() {

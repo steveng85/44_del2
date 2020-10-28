@@ -1,9 +1,43 @@
 package Game;
 
+
 public class Player {
     private String name;
+    private final Account acBalnace;
+
+
+    public Player(String name) {
+        this.name = name;
+        acBalnace = new Account(3000, 1000, 0);
+    }
+
+    public boolean checkWin() {
+        if (acBalnace.isFull()) {
+          //form for vinder besked til spiller x
+            return true;
+        }
+        return false;
+    }
+
+
+    public void addCoins(int amount) {
+        acBalnace.addCoins(amount);
+    }
+
+    public void resetAccount() {
+        acBalnace.reset();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCoins() {
+        return acBalnace.getCoins();
+    }
+    /*
     private int points;
-    private final int maxPoints = 3000;
+   // private final int maxPoints = 3000;
     private int lastRoll;
     private int currentRoll;
 
@@ -33,4 +67,6 @@ public class Player {
     public void setPoints(int points) {
         this.points = points;
     }
+
+     */
 }

@@ -31,7 +31,7 @@ public class Field {
         return extraTurn;
     }
 
-    public String toString(){
-        return (fieldNumber + " " + title + ": " + value + " dobbelt: " + extraTurn);
+    public String toString(){ return (fieldNumber + " " + title + ": " + value + " dobbelt: " + extraTurn);
+
     }
 }
