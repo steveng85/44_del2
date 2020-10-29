@@ -37,7 +37,7 @@ public final class FieldFactory {
         fields[i++] = new Field(8, "Black cave", "HELP! You found yourself lost in a black cave! You pay a caveman 70 coins to guide you out of the cave", -70, false);
         fields[i++] = new Field(9, "Huts in the", "LUCKY YOU! You found an abandon hut in the mountains filled with food, water and 60 coins", 60, false);
         fields[i++] = new Field(10, "The Werewall", "AUUUU! You tried chasing a warewolf but accidently ran into a wall and loose 80 coins, but dont worry you get to roll again", -80, true);
-        fields[i++] = new Field(11, "The pit", "Wellcome to the tower, here is 250", -50, false);
+        fields[i++] = new Field(11, "The pit", "OH dang! You just dropped 50 coins in the pit and cant get it back", -50, false);
         fields[i++] = new Field(12, "Goldmine", "Wellcome to the tower, here is 250", 650, false);
 
 
