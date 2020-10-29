@@ -5,7 +5,7 @@ import java.util.Scanner;
 import Game.Field;
 import Game.FieldFactory;
 import Game.Account;
-import javafx.application.Application;
+
 
 
 public class Game {
@@ -19,6 +19,7 @@ public class Game {
     Player player2;
     Player currentPlayer;
     boolean gameInProgress = true;
+    Field[] list_of_fields;
     int selectedLanguage;
     Language language = new Language();
 
@@ -52,30 +53,37 @@ public class Game {
 
     public void round() {
         if (input.nextLine().equals("")) {
+            System.out.println("\n\n----------------------------------------------");
             currentPlayer = player1;
             turn();
         }
         if (input.nextLine().equals("")) {
+            System.out.println("\n\n----------------------------------------------");
             currentPlayer = player2;
             turn();
         }
     }
 
     public void turn() {
-        dice1.roll();
-        dice2.roll();
-        diceTotal = dice1.getEyeValue()+dice2.getEyeValue();
-        Field[] list_of_fields = FieldFactory.makeFields(selectedLanguage);
-        System.out.println(currentPlayer.getName() + " " + language.approaches[selectedLanguage] + " " + list_of_fields[diceTotal].getTitle());
+        roll();
+        System.out.println(currentPlayer.getName() + " rolled " + diceTotal + " and approaches the " + list_of_fields[diceTotal].getTitle());
         System.out.println(list_of_fields[diceTotal].getDescription());
         currentPlayer.addCoins(list_of_fields[diceTotal].getValue());
+        System.out.println("You now have " + currentPlayer.getCoins() + " coins!");
+
         if (list_of_fields[diceTotal].getExtraTurn()) {
+            System.out.println("");
+
             turn();
         }
         checkForWin();
 
     }
-
+    public void roll() {
+        dice1.roll();
+        dice2.roll();
+        diceTotal = dice1.getEyeValue()+dice2.getEyeValue();
+    }
     public void checkForWin() {
         if (currentPlayer.checkWin()) {
             System.out.println("\n\n==========================================");
