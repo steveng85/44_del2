@@ -65,8 +65,9 @@ public class Game {
         System.out.println("\n\n----------------------------------------------");
         System.out.println(currentPlayer.getName() + " rolled " + diceTotal + " and approaches the " + list_of_fields[diceTotal].getTitle());
         System.out.println(list_of_fields[diceTotal].getDescription());
-        System.out.println("You now have " + currentPlayer.getCoins() + " coins!");
         currentPlayer.addCoins(list_of_fields[diceTotal].getValue());
+        System.out.println("You now have " + currentPlayer.getCoins() + " coins!");
+
         if (list_of_fields[diceTotal].getExtraTurn()) {
             turn();
         }
