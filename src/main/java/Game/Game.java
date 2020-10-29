@@ -4,7 +4,7 @@ import java.util.Scanner;
 import Game.Field;
 import Game.FieldFactory;
 import Game.Account;
-import javafx.application.Application;
+
 
 
 public class Game {
@@ -18,6 +18,8 @@ public class Game {
     Player player2;
     Player currentPlayer;
     boolean gameInProgress = true;
+    Field[] list_of_fields = FieldFactory.makeFields();
+
 
     public void startGame() {
         printWelcomeMessage();
@@ -60,9 +62,10 @@ public class Game {
         dice1.roll();
         dice2.roll();
         diceTotal = dice1.getEyeValue()+dice2.getEyeValue();
-        Field[] list_of_fields = FieldFactory.makeFields();
-        System.out.println(currentPlayer.getName() + " approaches the " + list_of_fields[diceTotal].getTitle());
+        System.out.println("\n\n----------------------------------------------");
+        System.out.println(currentPlayer.getName() + " rolled " + diceTotal + " and approaches the " + list_of_fields[diceTotal].getTitle());
         System.out.println(list_of_fields[diceTotal].getDescription());
+        System.out.println("You now have " + currentPlayer.getCoins() + " coins!");
         currentPlayer.addCoins(list_of_fields[diceTotal].getValue());
         if (list_of_fields[diceTotal].getExtraTurn()) {
             turn();
