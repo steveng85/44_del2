@@ -1,5 +1,6 @@
 package Game;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import Game.Field;
 import Game.FieldFactory;
@@ -18,16 +19,20 @@ public class Game {
     Player player2;
     Player currentPlayer;
     boolean gameInProgress = true;
+    int selectedLanguage;
+    Language language = new Language();
 
     public void startGame() {
+        System.out.println("Please select a language. Type 0 for English");
+        selectedLanguage = input.nextInt();
         printWelcomeMessage();
-        System.out.println("Input a name for Player1");
+        System.out.println(language.textInputName[selectedLanguage] + "1");
         String name1 = input.nextLine();
         player1 = new Player(name1);
-        System.out.println("Input a name for Player2");
+        System.out.println(language.textInputName[selectedLanguage] +"2");
         String name2 = input.nextLine();
         player2 = new Player(name2);
-        System.out.println("Press enter to start and continue the game");
+        System.out.println(language.textContinue[selectedLanguage]);
 
         while (gameInProgress) { //Keeps game going until gameWon is called
                 round();
@@ -60,8 +65,8 @@ public class Game {
         dice1.roll();
         dice2.roll();
         diceTotal = dice1.getEyeValue()+dice2.getEyeValue();
-        Field[] list_of_fields = FieldFactory.makeFields();
-        System.out.println(currentPlayer.getName() + " approaches the " + list_of_fields[diceTotal].getTitle());
+        Field[] list_of_fields = FieldFactory.makeFields(selectedLanguage);
+        System.out.println(currentPlayer.getName() + " " + language.approaches[selectedLanguage] + " " + list_of_fields[diceTotal].getTitle());
         System.out.println(list_of_fields[diceTotal].getDescription());
         currentPlayer.addCoins(list_of_fields[diceTotal].getValue());
         if (list_of_fields[diceTotal].getExtraTurn()) {
@@ -74,12 +79,12 @@ public class Game {
     public void checkForWin() {
         if (currentPlayer.checkWin()) {
             System.out.println("\n\n==========================================");
-            System.out.println("CONGRATULATIONS! " + currentPlayer.getName() + " has reached 3000 coins and won the game");
+            System.out.println(language.congratulations[selectedLanguage] + currentPlayer.getName() + " " + language.hasReached[selectedLanguage]);
             if (currentPlayer == player1) {
                 currentPlayer = player2;
             }
             else currentPlayer = player1;
-            System.out.println(currentPlayer.getName() + " only had " + currentPlayer.getCoins() + " coins :(");
+            System.out.println(currentPlayer.getName() + " " + language.onlyHad[selectedLanguage] + " " + currentPlayer.getCoins() + " " + language.coins[selectedLanguage]);
             System.out.println("==========================================\n");
             System.exit(0);
         }

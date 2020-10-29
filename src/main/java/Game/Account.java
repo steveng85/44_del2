@@ -41,7 +41,7 @@ public class Account {
         return coins;
     }
 
-    public void printBalance() {
-        System.out.println(coins);
+    public String toString() {
+        return String.valueOf(coins);
     }
 }
