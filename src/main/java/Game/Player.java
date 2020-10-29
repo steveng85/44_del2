@@ -3,31 +3,28 @@ package Game;
 
 public class Player {
     private String name;
-    private final Account acBalnace;
+    private final Account accountBalance;
 
 
     public Player(String name) {
         this.name = name;
-        acBalnace = new Account(3000, 1000, 0);
+        accountBalance = new Account(3000, 1000, 0);
     }
 
     public boolean checkWin() {
-        if (acBalnace.isFull()) {
-          //form for vinder besked til spiller x
-            return true;
-        }
-        return false;
+        //form for vinder besked til spiller x
+        return accountBalance.isFull();
     }
 
 
     public void addCoins(int amount) {
 
-        acBalnace.addCoins(amount);
+        accountBalance.addCoins(amount);
     }
 
     public void resetAccount() {
 
-        acBalnace.reset();
+        accountBalance.reset();
     }
 
     public String getName() {
@@ -37,8 +34,9 @@ public class Player {
 
     public int getCoins() {
 
-        return acBalnace.getCoins();
+        return accountBalance.getCoins();
     }
+
     /*
     private int points;
    // private final int maxPoints = 3000;

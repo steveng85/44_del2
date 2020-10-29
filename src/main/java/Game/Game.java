@@ -69,14 +69,14 @@ public class Game {
     }
 
     public void checkForWin() {
-        if (currentPlayer.getCoins() == 3000) {
+        if (currentPlayer.checkWin()) {
             System.out.println("\n\n==========================================");
-            System.out.println(currentPlayer.getName() + " won with 3000 fat monies! gg ez");
+            System.out.println("CONGRATULATIONS! " + currentPlayer.getName() + " has reached 3000 coins and won the game");
             if (currentPlayer == player1) {
                 currentPlayer = player2;
             }
             else currentPlayer = player1;
-            System.out.println(currentPlayer.getName() + " only had " + currentPlayer.getCoins() + " coins. What a loser lmao");
+            System.out.println(currentPlayer.getName() + " only had " + currentPlayer.getCoins() + " coins :(");
             System.out.println("==========================================\n");
             System.exit(0);
         }
