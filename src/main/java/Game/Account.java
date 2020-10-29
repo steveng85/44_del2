@@ -20,7 +20,13 @@ public class Account {
     public void addCoins(int amount) {
 
         coins += amount;
+        if (coins < MIN_COIN_AMOUNT) {
+            coins = MIN_COIN_AMOUNT;
+        } else if (coins > MAX_COIN_AMOUNT) {
+            coins = MAX_COIN_AMOUNT;
+        }
     }
+
 
     public void reset() {
 
@@ -28,12 +34,8 @@ public class Account {
     }
 
     public boolean isFull() {
-        if (coins >= MAX_COIN_AMOUNT) {
-            return true;
-        }
-        return false;
+        return coins >= MAX_COIN_AMOUNT;
     }
-
 
     public int getCoins() {
 

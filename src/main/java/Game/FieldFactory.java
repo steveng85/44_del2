@@ -8,8 +8,8 @@ import java.awt.*;
 public final class FieldFactory {
 
     public static  GUI_Field[] makeGUIFields() {
-        gui_fields.GUI_Field[] fields = new GUI_Field[11];
-        int i = 0;
+        gui_fields.GUI_Field[] fields = new GUI_Field[13];
+        int i = 2;
         fields[i++] = new GUI_Street("Tower", "+250", "2", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Crater", "-100", "3", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Palece gates", "+100", "4", "", Color.WHITE, Color.BLUE);
@@ -26,8 +26,8 @@ public final class FieldFactory {
     }
 
     public static  Field[] makeFields() {
-        Field[] fields = new Field[11];
-        int i = 0;
+        Field[] fields = new Field[13];
+        int i = 2;
         fields[i++] = new Field(2, "Tower", "Welcome to the tower, here is 250 mcNuggets", 250, false);
         fields[i++] = new Field(3, "Crater", "Welcome to the tower, here is 250 big macs", -100, false);
         fields[i++] = new Field(4, "Palace gates", "Welcome to the tower, here is 250 pizzas", 100, false);
@@ -35,7 +35,7 @@ public final class FieldFactory {
         fields[i++] = new Field(6, "Walled city", "Welcome to the tower, here is 250 spaceships", 180, false);
         fields[i++] = new Field(7, "Monastery", "Welcome to the tower, here is 250 apple strudels", 0, false);
         fields[i++] = new Field(8, "Black cave", "Welcome to the tower, here is 250 whip lashes", -70, false);
-        fields[i++] = new Field(9, "Huts in the", "Welcome to the tower, here is 250 high-fives", 60, false);
+        fields[i++] = new Field(9, "Huts in the mountain", "Welcome to the tower, here is 250 high-fives", 60, false);
         fields[i++] = new Field(10, "The Were-wall", "Welcome to the tower, here is 250", -80, true);
         fields[i++] = new Field(11, "The pit", "Welcome to the tower, here is 250", -50, false);
         fields[i] = new Field(12, "Goldmine", "Welcome to the tower, here is 250", 650, false);

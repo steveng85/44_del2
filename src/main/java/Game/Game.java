@@ -3,7 +3,8 @@ package Game;
 import java.util.Scanner;
 import Game.Field;
 import Game.FieldFactory;
-
+import Game.Account;
+import javafx.application.Application;
 
 
 public class Game {
@@ -12,26 +13,20 @@ public class Game {
 
     Dice dice1 = new Dice();
     Dice dice2 = new Dice();
-    //Player player1 = new Player();
-    //Player player2 = new Player();
+    int diceTotal = 0;
+    Player player1;
+    Player player2;
     Player currentPlayer;
     boolean gameInProgress = true;
 
     public void startGame() {
-        // Welcome the players
         printWelcomeMessage();
-        //Player1 gives a name
         System.out.println("Input a name for Player1");
         String name1 = input.nextLine();
-        //player1.setName(name1);
-        //player2 gives a name
+        player1 = new Player(name1);
         System.out.println("Input a name for Player2");
         String name2 = input.nextLine();
-       // player2.setName(name2);
-        //Tells Who is who
-        //System.out.println("Player1 is " + player1.getName());
-        //System.out.println("Player2 is " + player2.getName());
-        //Telling the players how to start the game
+        player2 = new Player(name2);
         System.out.println("Press enter to start and continue the game");
 
         while (gameInProgress) { //Keeps game going until gameWon is called
@@ -52,20 +47,39 @@ public class Game {
     }
 
     public void round() {
-
+        currentPlayer = player1;
+        turn();
+        currentPlayer = player2;
+        turn();
     }
 
     public void turn() {
         dice1.roll();
         dice2.roll();
-        //
-                System.out.println("You rolled a " + dice1.getEyeValue() + " and " + dice2.getEyeValue());
-        //currentPlayer.changePoints(checkRollRules(dice1.getEyeValue()+dice2.getEyeValue())); //adds/subtracts points to players' totals here.
-    FieldFactory fields = new FieldFactory();
+        diceTotal = dice1.getEyeValue()+dice2.getEyeValue();
+        Field[] list_of_fields = FieldFactory.makeFields();
+        System.out.println(currentPlayer.getName() + " approaches the " + list_of_fields[diceTotal].getTitle());
+        System.out.println(list_of_fields[diceTotal].getDescription());
+        currentPlayer.addCoins(list_of_fields[diceTotal].getValue());
+        if (list_of_fields[diceTotal].getExtraTurn()) {
+            turn();
+        }
+        checkForWin();
+
     }
 
     public void checkForWin() {
-
+        if (currentPlayer.getCoins() == 3000) {
+            System.out.println("\n\n==========================================");
+            System.out.println(currentPlayer.getName() + " won with 3000 fat monies! gg ez");
+            if (currentPlayer == player1) {
+                currentPlayer = player2;
+            }
+            else currentPlayer = player1;
+            System.out.println(currentPlayer.getName() + " only had " + currentPlayer.getCoins() + " coins. What a loser lmao");
+            System.out.println("==========================================\n");
+            System.exit(0);
+        }
     }
 
     public void gameWon() {
