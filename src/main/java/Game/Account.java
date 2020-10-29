@@ -9,7 +9,6 @@ public class Account {
     private final int DEFAULT_COIN_AMOUNT;
     private final int MIN_COIN_AMOUNT;
     private int coins;
-    //money stuff here
 
     public Account(int maxCoinAmount, int defaultCoinAmount, int minCoinAmount) {
         this.MAX_COIN_AMOUNT = maxCoinAmount;
@@ -42,7 +41,7 @@ public class Account {
         return coins;
     }
 
-    //public String toString(int accountBalance) {
-    //    return toString(accountBalance);
-    //}
+    public void printBalance() {
+        System.out.println(coins);
+    }
 }

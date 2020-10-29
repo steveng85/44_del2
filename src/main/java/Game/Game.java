@@ -30,8 +30,7 @@ public class Game {
         System.out.println("Press enter to start and continue the game");
 
         while (gameInProgress) { //Keeps game going until gameWon is called
-            round();
-
+                round();
         }
     }
 
@@ -47,10 +46,14 @@ public class Game {
     }
 
     public void round() {
-        currentPlayer = player1;
-        turn();
-        currentPlayer = player2;
-        turn();
+        if (input.nextLine().equals("")) {
+            currentPlayer = player1;
+            turn();
+        }
+        if (input.nextLine().equals("")) {
+            currentPlayer = player2;
+            turn();
+        }
     }
 
     public void turn() {
@@ -81,11 +84,6 @@ public class Game {
             System.exit(0);
         }
     }
-
-    public void gameWon() {
-
-    }
-
 
 }
 
