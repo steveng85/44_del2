@@ -32,6 +32,6 @@ public class Field {
     }
 
     public String toString(){
-        return (fieldNumber + " " + title + ": " + value);
+        return (fieldNumber + " " + title + ": " + value + " dobbelt: " + extraTurn);
     }
 }
