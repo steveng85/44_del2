@@ -6,6 +6,13 @@ public class Language {
     //Index 0 = English, Index 1 = Danish, Index 2 = German, etc.
     public String language = "Index 0 = English, Index 1 = Danish, Index 2 = German,";
 
+    //Strings for welcomeMessage()
+    public String[] welcomeMessage = {"Welcome to the Game\n" +
+            "The players each roll a set of dice, where the outcome depends on the luck of the dice.\n" +
+            "You can gain and lose coins, as well as potentially receive an extra turn.\n" +
+            "You win the game if you collect 3000 coins.\n" +
+            "Press enter to start a new game"};
+
     //Strings for makeFields()
     public String[] fieldDescriptionTower = {"Congratulations! You reached the top of the tower and found a bag filled with money! You get 250 coins"};
     public String[] fieldDescriptionCrater = {"Oh no! You fell into a crater and need to buy your way out with 100 coins"};
@@ -24,13 +31,17 @@ public class Language {
     public String[] textContinue = {"Press enter to start and continue the game"};
 
     //Strings for turn()
-    public String[] approaches = {"approaches"};
+    public String[] rolled = {"rolled"};
+    public String[] approaches = {"and approaches the"};
+    public String[] youNowHave = {"You now have"};
+    public String[] coins = {"coins!"};
+
 
     //Strings for checkForWin()
-    public String[] congratulations = {"CONGRATULATIONS! "};
+    public String[] congratulations = {"CONGRATULATIONS!"};
     public String[] hasReached = {"has reached 3000 coins and won the game"};
     public String[] onlyHad = {"only had"};
-    public String[] coins = {"coins :("};
+    public String[] coinsFrowney = {"coins :("};
 
 
 
