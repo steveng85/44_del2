@@ -10,8 +10,7 @@ public class Language {
     public String[] welcomeMessage = {"Welcome to the Game\n" +
             "The players each roll a set of dice, where the outcome depends on the luck of the dice.\n" +
             "You can gain and lose coins, as well as potentially receive an extra turn.\n" +
-            "You win the game if you collect 3000 coins.\n" +
-            "Press enter to start a new game"};
+            "You win the game if you collect 3000 coins.\n" };
 
     //Strings for makeFields()
     public String[] fieldDescriptionTower = {"Congratulations! You reached the top of the tower and found a bag filled with money! You get 250 coins"};
