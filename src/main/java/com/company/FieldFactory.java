@@ -29,7 +29,7 @@ public final class FieldFactory {
         Field[] fields = new Field[11];
         int i = 0;
         fields[i++] = new Field(2, "Tower", "Congratulations! You have reached the top of the tower and found a bag filled with money you get 250 coins", 250, false);
-        fields[i++] = new Field(3, "Crater", "", -100, false);
+        fields[i++] = new Field(3, "Crater", "Oh no! You fell into a crater and need to buy your way out with 100 coins", -100, false);
         fields[i++] = new Field(4, "Palece gates", "Wellcome to the tower, here is 250", 100, false);
         fields[i++] = new Field(5, "Cold Desert", "Wellcome to the tower, here is 250", -20, false);
         fields[i++] = new Field(6, "Walled city", "Wellcome to the tower, here is 250", 180, false);
