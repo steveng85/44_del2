@@ -4,7 +4,6 @@ public class GUI_Game {
 
     Dice dice1 = new Dice();
     Dice dice2 = new Dice();
-    int diceTotal = 0;
     Player player1;
     Player player2;
     Player currentPlayer;
