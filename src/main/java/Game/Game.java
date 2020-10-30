@@ -18,7 +18,7 @@ public class Game {
     Player currentPlayer;
     boolean gameInProgress = true;
     Field[] list_of_fields;
-    int selectedLanguage;
+    private static int selectedLanguage;
     Language language = new Language();
 
     public void startGame() {
@@ -113,6 +113,10 @@ public class Game {
             System.out.println("==========================================\n");
             System.exit(0);
         }
+    }
+
+    public static int returnLanguage() {
+        return selectedLanguage;
     }
 
 }

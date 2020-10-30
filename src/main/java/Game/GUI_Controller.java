@@ -4,15 +4,17 @@ import gui_fields.GUI_Field;
 import gui_fields.GUI_Street;
 import gui_fields.*;
 import gui_main.GUI;
+import Game.Game;
 
 import java.awt.*;
 
 public class GUI_Controller {
+    int languageIndex = Game.returnLanguage();
     private GUI gui;
     GUI_Player guiPlayer1;
     GUI_Player guiPlayer2;
     void makeGUI() {
-        GUI_Field[] fields = FieldFactory.makeGUIFields();
+        GUI_Field[] fields = FieldFactory.makeGUIFields(languageIndex);
 
         gui = new GUI(fields, Color.gray);
     }
