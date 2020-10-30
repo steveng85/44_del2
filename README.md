@@ -8,6 +8,8 @@ In order for you to run our project you must have Java installed as well as one 
 - Windows vista, 7, or later version
 - MacOS 
 
+Navigate to 44_del2\out\artifacts\44_del2_jar
+
 
 You may be able to run this program on linux as well, but we have not tested it, and cannot guarantee anything wil work according to plan/at all. 
 
@@ -24,6 +26,7 @@ For at køre dette program skal du have Java installeret samt et af følgende op
 - Windows vista, 7, eller en senere version
 - MacOS
 
+Naviger til 44_del2\out\artifacts\44_del2_jar
 
 Du kan muligvis også køre dette program på linux, men da vi ikke har kunne teste det, kan vi ikke garantere at noget vil virke/vil virke efter planen.
 
