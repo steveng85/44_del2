@@ -8,6 +8,7 @@ In order for you to run our project you must have Java installed as well as one 
 - Windows vista, 7, or later version
 - MacOS
 - Programing system that can run java files 
+
 You may be able to run this program on linux as well, but we have not tested it, and cannot guarantee anything wil work according to plan/at all. 
 
 Once the program is open it is fairly easy to use.
