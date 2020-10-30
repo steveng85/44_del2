@@ -6,6 +6,9 @@ public class Game {
 
     Scanner typeName = new Scanner(System.in);
     Scanner typeLanguage = new Scanner(System.in);
+    Scanner typeEnter = new Scanner(System.in);
+    String typedText;
+    String typedLanguage;
 
     Dice dice1 = new Dice();
     Dice dice2 = new Dice();
@@ -20,7 +23,11 @@ public class Game {
 
     public void startGame() {
         System.out.println("Please select a language. Type 0 for English");
-        selectedLanguage = typeLanguage.nextInt();
+        typedLanguage = typeLanguage.nextLine();
+        if (typedLanguage.equals("0")) { //Add more statements for additional languages
+            selectedLanguage = Integer.parseInt(typedLanguage);
+        }
+        else selectedLanguage = 0;
         list_of_fields = FieldFactory.makeFields(selectedLanguage);
         welcomeMessage();
 
@@ -31,7 +38,9 @@ public class Game {
         System.out.println(language.textInputName[selectedLanguage] +"2");
         String name2 = typeName.nextLine();
         player2 = new Player(name2);
+
         System.out.println(language.textContinue[selectedLanguage]);
+
 
         while (gameInProgress) { //Keeps game going until gameWon is called
                 round();
@@ -44,15 +53,32 @@ public class Game {
     }
 
     public void round() {
-        if (typeName.nextLine().equals("")) {
+        typedText = typeEnter.nextLine();
+        if (typedText.equals("")) {
             System.out.println("\n\n----------------------------------------------");
             currentPlayer = player1;
             turn();
         }
-        if (typeName.nextLine().equals("")) {
+        else if (typedText.equals("exit") || typedText.equals("ff") || typedText.equals("tactical retreat")) {
+            System.out.println(language.forfeit[selectedLanguage]);
+            typedText = typeEnter.nextLine();
+            if (typedText.equals("yes") || typedText.equals("yep") || typedText.equals("y") || typedText.equals("im a loser")) {
+                System.exit(0);
+            }
+        }
+
+        typedText = typeEnter.nextLine();
+        if (typedText.equals("")) {
             System.out.println("\n\n----------------------------------------------");
             currentPlayer = player2;
             turn();
+        }
+        else if (typedText.equals("exit") || typedText.equals("ff") || typedText.equals("tactical retreat")) {
+            System.out.println(language.forfeit[selectedLanguage]);
+            typedText = typeEnter.nextLine();
+            if (typedText.equals("yes") || typedText.equals("yep") || typedText.equals("y") || typedText.equals("im a loser")) {
+                System.exit(0);
+            }
         }
     }
 
@@ -64,6 +90,7 @@ public class Game {
         System.out.println(language.youNowHave[selectedLanguage] + " " + currentPlayer.getCoins() + " " + language.coins[selectedLanguage]);
 
         if (list_of_fields[diceTotal].getExtraTurn()) {
+            System.out.print("\n");
             turn();
         }
         checkForWin();

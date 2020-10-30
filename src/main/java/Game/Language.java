@@ -36,6 +36,9 @@ public class Language {
     public String[] youNowHave = {"You now have"};
     public String[] coins = {"coins!"};
 
+    //Strings for round()
+    public String[] forfeit = {"Are you sure you want to forfeit the game? (Type \"y\" to confirm"};
+
 
     //Strings for checkForWin()
     public String[] congratulations = {"CONGRATULATIONS!"};
