@@ -15,10 +15,33 @@ public class GUI_Controller {
         gui = new GUI(fields, Color.gray);
     }
 
-    void rollDice(int d1, int d2) {
+    public void addPlayers(Player p1, Player p2) {
+
+        GUI_Player guiPlayer1 = new GUI_Player(
+                p1.getName(),
+                p1.getCoins(),
+                new GUI_Car(Color.BLACK, Color.GRAY, GUI_Car.Type.RACECAR, GUI_Car.Pattern.HORIZONTAL_GRADIANT));
+        gui.addPlayer(guiPlayer1);
+
+        GUI_Player guiPlayer2 = new GUI_Player(
+                p2.getName(),
+                p2.getCoins(),
+                new GUI_Car(Color.WHITE, Color.RED, GUI_Car.Type.UFO, GUI_Car.Pattern.CHECKERED));
+        gui.addPlayer(guiPlayer2);
+    }
+
+    public void rollDice(int d1, int d2) {
         gui.setDice(d1, d2);
     }
-    void showMessage(String message){
+
+    public void showMessage(String message){
         gui.showMessage(message);
+    }
+
+    public String player1Input() {
+        return gui.getUserString("Player 1 please enter your name: ");
+    }
+    public String player2Input() {
+        return gui.getUserString("Player 2 please enter your name: ");
     }
 }

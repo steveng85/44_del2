@@ -7,9 +7,9 @@ import java.awt.*;
 
 public final class FieldFactory {
 
-    public static  GUI_Field[] makeGUIFields() {
-        gui_fields.GUI_Field[] fields = new GUI_Field[13];
-        int i = 2;
+    public static GUI_Field[] makeGUIFields() {
+        gui_fields.GUI_Field[] fields = new GUI_Field[11];
+        int i = 0;
         fields[i++] = new GUI_Street("Tower", "+250", "2", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Crater", "-100", "3", "", Color.WHITE, Color.BLUE);
         fields[i++] = new GUI_Street("Palace Gates", "+100", "4", "", Color.WHITE, Color.BLUE);
