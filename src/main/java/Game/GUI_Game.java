@@ -40,7 +40,7 @@ public class GUI_Game {
             gameInProgress = false;
             return;
         }
-        if (roll1 == roll2) {
+        if (roll1 + roll2 == 10) {
             if (currentPlayer == player1)
                 currentPlayer = player2;
             else {
