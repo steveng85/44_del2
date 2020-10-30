@@ -7,6 +7,7 @@ This is our CDIO project 2!
 In order for you to run our project you must have Java installed as well as one of the following operating systems:
 - Windows vista, 7, or later version
 - MacOS
+- Programing system that can run java files 
 You may be able to run this program on linux as well, but we have not tested it, and cannot guarantee anything wil work according to plan/at all. 
 
 Once the program is open it is fairly easy to use.
@@ -21,6 +22,7 @@ Dette er vores CDIO 2 projekt.
 For at køre dette program skal du have Java installeret samt et af følgende operativsystemer:
 - Windows vista, 7, eller en senere version
 - MacOS
+- Programmerings program der kan kører java-filer 
 
 Du kan muligvis også køre dette program på linux, men da vi ikke har kunne teste det, kan vi ikke garantere at noget vil virke/vil virke efter planen.
 
