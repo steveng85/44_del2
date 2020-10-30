@@ -10,7 +10,6 @@ class DiceTest {
 
     @Test
     void roll() {
-        // Line 13-55 is modified code used from our CDIO project 1.
         Dice dice1 = new Dice();
         Dice dice2 = new Dice();
 
